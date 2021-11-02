@@ -25,12 +25,16 @@ To run the demo, make sure your controller is plugged in and can be detected by 
 
     ros2 launch moveit_servo servo_example.launch.py
 
+Make a service request to start Servo ::
+
+    ros2 service call /servo_node/start_servo std_srvs/srv/Trigger {}
+
 You should be able to control the arm with your controller now, with MoveIt Servo automatically avoiding singularities and collisions.
 
 Without a Controller
 ^^^^^^^^^^^^^^^^^^^^
 
-If you do not have a controller, you can still try the demo using your keyboard. With the demo still running, in a new terminal, run ::
+If you do not have a joystick or game controller, you can still try the demo using your keyboard. With the demo still running, in a new terminal, run ::
 
     ros2 run moveit2_tutorials servo_keyboard_input
 
